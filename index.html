@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="App Tech Hub — Premium mobile & web applications crafted by Stone. Restaurant POS, clinic management, Buddhist teachings, and more.">
+  <meta name="author" content="Stone (Myo Myat Thu)">
+  <meta name="keywords" content="App Tech Hub, Flutter apps, mobile development, The Order Pad, KuTha, Dhamma Channel, Myanmar apps">
+  <meta property="og:title" content="App Tech Hub — Crafted by Stone">
+  <meta property="og:description" content="Premium mobile & web applications that simplify your work and life.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://myomyatthu7.github.io">
+  <title>App Tech Hub — Crafted by Stone</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/logos/the_order_pad.png">
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="navbar-brand">
+        <div class="brand-icon">⚡</div>
+        App Tech Hub
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero section" id="hero">
+    <div class="hero-bg">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+      <div class="hero-grid"></div>
+    </div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="status-dot"></span>
+          Actively building
+        </div>
+
+        <h1 class="hero-title">
+          Building apps that<br>
+          <span class="highlight">simplify your life</span> <span class="wave">👋</span>
+        </h1>
+
+        <p class="hero-description">
+          Hi, I'm <strong>Stone</strong>. I craft premium mobile & web applications 
+          — from restaurant management to clinic solutions and beyond.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#products" class="btn-primary">
+            View Products
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M7 7h10v10"/></svg>
+          </a>
+          <a href="#contact" class="btn-secondary">
+            Get in touch
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number">5</div>
+            <div class="stat-label">Products</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">3+</div>
+            <div class="stat-label">Industries</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">∞</div>
+            <div class="stat-label">Passion</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-app-grid">
+          <a href="#product-order-pad" class="hero-app-card">
+            <img src="assets/logos/the_order_pad.png" alt="The Order Pad">
+            <span>Order Pad</span>
+          </a>
+          <a href="#product-kutha" class="hero-app-card">
+            <img src="assets/logos/kutha.png" alt="KuTha">
+            <span>KuTha</span>
+          </a>
+          <a href="#product-dhamma" class="hero-app-card">
+            <img src="assets/logos/dhamma_channel.png" alt="Dhamma Channel">
+            <span>Dhamma</span>
+          </a>
+          <a href="#product-the-pad" class="hero-app-card">
+            <img src="assets/logos/the_pad.png" alt="The Pad">
+            <span>The Pad</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRODUCTS ==================== -->
+  <section class="products section" id="products">
+    <div class="container">
+      <div class="products-header reveal">
+        <div class="section-label">
+          <span class="dot"></span>
+          Products
+        </div>
+        <h2 class="section-title">Apps we've built</h2>
+        <p class="section-subtitle">Each product is crafted with care — designed to solve real problems for real people.</p>
+      </div>
+
+      <!-- ===== THE ORDER PAD ===== -->
+      <div class="product-card reveal" data-product="order-pad" id="product-order-pad">
+        <div class="product-card-inner">
+          <div class="product-info">
+            <div class="product-header">
+              <img src="assets/logos/the_order_pad.png" alt="The Order Pad" class="product-logo">
+              <div class="product-title-group">
+                <h3 class="product-name">The Order Pad</h3>
+                <p class="product-tagline">Restaurant & Cafe POS System</p>
+              </div>
+              <span class="product-status live">Live</span>
+            </div>
+            <p class="product-description">
+              A complete point-of-sale system for restaurants and cafes. Manage orders, tables, 
+              kitchen workflow, staff, and revenue — all from one beautiful app. 
+              Available on both mobile and web.
+            </p>
+            <ul class="product-features">
+              <li>
+                <span class="check">✓</span>
+                Real-time order tracking
+              </li>
+              <li>
+                <span class="check">✓</span>
+                Table management
+              </li>
+              <li>
+                <span class="check">✓</span>
+                Kitchen display system
+              </li>
+              <li>
+                <span class="check">✓</span>
+                Staff management
+              </li>
+              <li>
+                <span class="check">✓</span>
+                Revenue analytics
+              </li>
+              <li>
+                <span class="check">✓</span>
+                Multi-restaurant support
+              </li>
+            </ul>
+            <div class="product-platforms">
+              <span class="platform-badge">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 2.236a.4.4 0 00-.447-.008L3.553 10.228a.4.4 0 00-.003.694l2.73 1.59 11.243-10.276zm1.395 1.163L7.543 13.5l3.557 2.073 9.47-5.478a.8.8 0 000-1.39l-1.652-.955zM6.096 13.269l-2.193 2.007a.8.8 0 000 1.39l1.652.955 11.375-10.395-2.73-1.59-8.104 7.633zm1.447.843l-4.28 3.912a.4.4 0 00.207.73l13.523-7.82-3.557-2.073-5.893 5.251z"/></svg>
+                Android
+              </span>
+              <span class="platform-badge">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                Web App
+              </span>
+            </div>
+          </div>
+          <div class="product-screenshots">
+            <div class="product-screenshots-bg"></div>
+            <div class="screenshot-carousel">
+              <div class="carousel-item">
+                <div class="phone-mockup">
+                  <img src="assets/screenshots/the_order_pad/dashboard.png" alt="Dashboard" loading="lazy">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="phone-mockup">
+                  <img src="assets/screenshots/the_order_pad/tables.png" alt="Table Management" loading="lazy">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="phone-mockup">
+                  <img src="assets/screenshots/the_order_pad/orders.png" alt="Orders" loading="lazy">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="laptop-mockup">
+                  <img src="assets/screenshots/the_order_pad/web.png" alt="Web Dashboard" loading="lazy">
+                </div>
+              </div>
+            </div>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== THE ORDER PAD PLUS ===== -->
+      <div class="product-card reverse reveal" data-product="order-pad-plus" id="product-order-pad-plus">
+        <div class="product-card-inner">
+          <div class="product-info">
+            <div class="product-header">
+              <img src="assets/logos/the_order_pad_plus.png" alt="The Order Pad Plus" class="product-logo">
+              <div class="product-title-group">
+                <h3 class="product-name">The Order Pad Plus</h3>
+                <p class="product-tagline">Advanced POS for Growing Businesses</p>
+              </div>
+              <span class="product-status coming-soon">Coming Soon</span>
+            </div>
+            <p class="product-description">
+              The next evolution of our restaurant POS system. Everything you love about The Order Pad, 
+              plus advanced features for scaling businesses — enhanced analytics, 
+              multi-branch management, and more.
+            </p>
+            <ul class="product-features">
+              <li>
+                <span class="check">✓</span>
+                Everything in Order Pad
+              </li>
+              <li>
+                <span class="check">✓</span>
+                Advanced analytics
+              </li>
+              <li>
+                <span class="check">✓</span>
+                Multi-branch support
+              </li>
+              <li>
+                <span class="check">✓</span>
+                Enhanced reporting
+              </li>
+            </ul>
+            <div class="product-platforms">
+              <span class="platform-badge">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 2.236a.4.4 0 00-.447-.008L3.553 10.228a.4.4 0 00-.003.694l2.73 1.59 11.243-10.276zm1.395 1.163L7.543 13.5l3.557 2.073 9.47-5.478a.8.8 0 000-1.39l-1.652-.955zM6.096 13.269l-2.193 2.007a.8.8 0 000 1.39l1.652.955 11.375-10.395-2.73-1.59-8.104 7.633zm1.447.843l-4.28 3.912a.4.4 0 00.207.73l13.523-7.82-3.557-2.073-5.893 5.251z"/></svg>
+                Android
+              </span>
+              <span class="platform-badge">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                Web App
+              </span>
+            </div>
+          </div>
+          <div class="product-screenshots">
+            <div class="product-screenshots-bg"></div>
+            <div class="coming-soon-overlay">
+              <div class="icon">🚀</div>
+              <div class="text">Coming Soon</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== KUTHA ===== -->
+      <div class="product-card reveal" data-product="kutha" id="product-kutha">
+        <div class="product-card-inner">
+          <div class="product-info">
+            <div class="product-header">
+              <img src="assets/logos/kutha.png" alt="KuTha" class="product-logo">
+              <div class="product-title-group">
+                <h3 class="product-name">KuTha (ကုသ)</h3>
+                <p class="product-tagline">Clinic Management System</p>
+              </div>
+              <span class="product-status live">Built</span>
+            </div>
+            <p class="product-description">
+              A comprehensive clinic management system for doctors and healthcare providers. 
+              Manage patients, appointments, billing, and inventory 
+              — all with a beautiful, intuitive dark interface.
+            </p>
+            <ul class="product-features">
+              <li>
+                <span class="check">✓</span>
+                Patient management
+              </li>
+              <li>
+                <span class="check">✓</span>
+                Appointment scheduling
+              </li>
+              <li>
+                <span class="check">✓</span>
+                Inventory tracking
+              </li>
+              <li>
+                <span class="check">✓</span>
+                Billing system
+              </li>
+              <li>
+                <span class="check">✓</span>
+                Walk-in support
+              </li>
+              <li>
+                <span class="check">✓</span>
+                Revenue dashboard
+              </li>
+            </ul>
+            <div class="product-platforms">
+              <span class="platform-badge">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 2.236a.4.4 0 00-.447-.008L3.553 10.228a.4.4 0 00-.003.694l2.73 1.59 11.243-10.276zm1.395 1.163L7.543 13.5l3.557 2.073 9.47-5.478a.8.8 0 000-1.39l-1.652-.955zM6.096 13.269l-2.193 2.007a.8.8 0 000 1.39l1.652.955 11.375-10.395-2.73-1.59-8.104 7.633zm1.447.843l-4.28 3.912a.4.4 0 00.207.73l13.523-7.82-3.557-2.073-5.893 5.251z"/></svg>
+                Android
+              </span>
+            </div>
+          </div>
+          <div class="product-screenshots">
+            <div class="product-screenshots-bg"></div>
+            <div class="screenshot-carousel">
+              <div class="carousel-item">
+                <div class="phone-mockup">
+                  <img src="assets/screenshots/kutha/dashboard.png" alt="Dashboard" loading="lazy">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="phone-mockup">
+                  <img src="assets/screenshots/kutha/appointments.png" alt="Appointments" loading="lazy">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="phone-mockup">
+                  <img src="assets/screenshots/kutha/patients.png" alt="Patients" loading="lazy">
+                </div>
+              </div>
+            </div>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== DHAMMA CHANNEL ===== -->
+      <div class="product-card reverse reveal" data-product="dhamma" id="product-dhamma">
+        <div class="product-card-inner">
+          <div class="product-info">
+            <div class="product-header">
+              <img src="assets/logos/dhamma_channel.png" alt="Dhamma Channel" class="product-logo">
+              <div class="product-title-group">
+                <h3 class="product-name">Dhamma Channel</h3>
+                <p class="product-tagline">Buddhist Teachings — Read & Listen</p>
+              </div>
+              <span class="product-status live">Built</span>
+            </div>
+            <p class="product-description">
+              A beautiful app for reading and listening to Buddhist teachings. 
+              Features Pali and Myanmar text with audio playback, 
+              offline support, and a warm, contemplative dark interface.
+            </p>
+            <ul class="product-features">
+              <li>
+                <span class="check">✓</span>
+                Pali & Myanmar text
+              </li>
+              <li>
+                <span class="check">✓</span>
+                Audio playback
+              </li>
+              <li>
+                <span class="check">✓</span>
+                Offline support
+              </li>
+              <li>
+                <span class="check">✓</span>
+                Category browsing
+              </li>
+              <li>
+                <span class="check">✓</span>
+                Favorites collection
+              </li>
+              <li>
+                <span class="check">✓</span>
+                Beautiful dark theme
+              </li>
+            </ul>
+            <div class="product-platforms">
+              <span class="platform-badge">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 2.236a.4.4 0 00-.447-.008L3.553 10.228a.4.4 0 00-.003.694l2.73 1.59 11.243-10.276zm1.395 1.163L7.543 13.5l3.557 2.073 9.47-5.478a.8.8 0 000-1.39l-1.652-.955zM6.096 13.269l-2.193 2.007a.8.8 0 000 1.39l1.652.955 11.375-10.395-2.73-1.59-8.104 7.633zm1.447.843l-4.28 3.912a.4.4 0 00.207.73l13.523-7.82-3.557-2.073-5.893 5.251z"/></svg>
+                Android
+              </span>
+            </div>
+          </div>
+          <div class="product-screenshots">
+            <div class="product-screenshots-bg"></div>
+            <div class="screenshot-carousel">
+              <div class="carousel-item">
+                <div class="phone-mockup">
+                  <img src="assets/screenshots/dhamma_channel/home.png" alt="Home" loading="lazy">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="phone-mockup">
+                  <img src="assets/screenshots/dhamma_channel/reader.png" alt="Reader" loading="lazy">
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="phone-mockup">
+                  <img src="assets/screenshots/dhamma_channel/library.png" alt="Library" loading="lazy">
+                </div>
+              </div>
+            </div>
+            <div class="carousel-dots"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== THE PAD ===== -->
+      <div class="product-card reveal" data-product="the-pad" id="product-the-pad">
+        <div class="product-card-inner">
+          <div class="product-info">
+            <div class="product-header">
+              <img src="assets/logos/the_pad.png" alt="The Pad" class="product-logo">
+              <div class="product-title-group">
+                <h3 class="product-name">The Pad</h3>
+                <p class="product-tagline">Simple, Beautiful Notepad</p>
+              </div>
+              <span class="product-status coming-soon">Coming Soon</span>
+            </div>
+            <p class="product-description">
+              A clean and simple notepad app. No clutter, no distractions — just write. 
+              Supports light and dark themes with a focus on a delightful writing experience.
+            </p>
+            <ul class="product-features">
+              <li>
+                <span class="check">✓</span>
+                Clean writing experience
+              </li>
+              <li>
+                <span class="check">✓</span>
+                Light & dark themes
+              </li>
+              <li>
+                <span class="check">✓</span>
+                Quick notes
+              </li>
+              <li>
+                <span class="check">✓</span>
+                Simple & focused
+              </li>
+            </ul>
+            <div class="product-platforms">
+              <span class="platform-badge">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 2.236a.4.4 0 00-.447-.008L3.553 10.228a.4.4 0 00-.003.694l2.73 1.59 11.243-10.276zm1.395 1.163L7.543 13.5l3.557 2.073 9.47-5.478a.8.8 0 000-1.39l-1.652-.955zM6.096 13.269l-2.193 2.007a.8.8 0 000 1.39l1.652.955 11.375-10.395-2.73-1.59-8.104 7.633zm1.447.843l-4.28 3.912a.4.4 0 00.207.73l13.523-7.82-3.557-2.073-5.893 5.251z"/></svg>
+                Android
+              </span>
+            </div>
+          </div>
+          <div class="product-screenshots">
+            <div class="product-screenshots-bg"></div>
+            <div class="coming-soon-overlay">
+              <div class="icon">📝</div>
+              <div class="text">Coming Soon</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text reveal">
+          <div class="section-label">
+            <span class="dot"></span>
+            About
+          </div>
+          <h2 class="section-title">The person behind<br>the apps</h2>
+          <p>
+            I'm <strong>Stone</strong> — a passionate developer who loves building 
+            beautiful, functional applications. I believe great software should feel 
+            effortless to use while solving real problems.
+          </p>
+          <p>
+            From restaurant management to healthcare and spiritual education, I build 
+            cross-platform apps using Flutter and Firebase that make a real difference 
+            in people's daily lives.
+          </p>
+          <div class="tech-stack">
+            <span class="tech-badge">Flutter</span>
+            <span class="tech-badge">Dart</span>
+            <span class="tech-badge">Firebase</span>
+            <span class="tech-badge">Firestore</span>
+            <span class="tech-badge">Cloud Functions</span>
+            <span class="tech-badge">Android</span>
+            <span class="tech-badge">Web</span>
+            <span class="tech-badge">iOS</span>
+          </div>
+        </div>
+
+        <div class="about-visual reveal">
+          <div class="about-card">
+            <div class="about-avatar">S</div>
+            <h3>Stone</h3>
+            <p class="role">Full-Stack Mobile Developer</p>
+            <div class="about-links">
+              <a href="https://github.com/myomyatthu7" target="_blank" rel="noopener noreferrer" class="about-link" aria-label="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="mailto:myomyatthu19999@gmail.com" class="about-link" aria-label="Email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="about-link" aria-label="Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact-content reveal">
+        <div class="section-label">
+          <span class="dot"></span>
+          Contact
+        </div>
+        <h2 class="section-title">Let's connect</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">
+          Have a project idea or want to collaborate? Feel free to reach out.
+        </p>
+
+        <div class="contact-card">
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div class="contact-detail">
+              <div class="label">Email</div>
+              <div class="value"><a href="mailto:myomyatthu19999@gmail.com">myomyatthu19999@gmail.com</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">💻</div>
+            <div class="contact-detail">
+              <div class="label">GitHub</div>
+              <div class="value"><a href="https://github.com/myomyatthu7" target="_blank" rel="noopener noreferrer">github.com/myomyatthu7</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📘</div>
+            <div class="contact-detail">
+              <div class="label">Facebook</div>
+              <div class="value"><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">App Tech Hub</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">
+        Made with <span>❤️</span> by Stone · © 2026 App Tech Hub
+      </p>
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
