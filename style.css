@@ -196,15 +196,11 @@ ul {
   color: var(--text-primary);
 }
 
-.navbar-brand .brand-icon {
+.navbar-brand .brand-logo {
   width: 32px;
   height: 32px;
   border-radius: var(--radius-sm);
-  background: var(--accent-gradient);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.9rem;
+  object-fit: cover;
 }
 
 .nav-links {
