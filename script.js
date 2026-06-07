@@ -5,6 +5,11 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ============== PAGE LOAD ANIMATION ==============
+  requestAnimationFrame(() => {
+    document.body.classList.remove('loading');
+  });
+
   // ============== NAVBAR SCROLL ==============
   const navbar = document.getElementById('navbar');
 
@@ -50,6 +55,23 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // ============== SCROLL TO TOP BUTTON ==============
+  const scrollTopBtn = document.getElementById('scrollTop');
+
+  if (scrollTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    }, { passive: true });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 
   // ============== SCROLL REVEAL ANIMATIONS ==============
   const revealElements = document.querySelectorAll('.reveal');
@@ -119,6 +141,9 @@ document.addEventListener('DOMContentLoaded', () => {
   carousels.forEach(container => {
     const carousel = container.querySelector('.screenshot-carousel');
     const dotsContainer = container.querySelector('.carousel-dots');
+    const captionEl = container.querySelector('.carousel-caption');
+    const prevBtn = container.querySelector('.carousel-prev');
+    const nextBtn = container.querySelector('.carousel-next');
     if (!carousel || !dotsContainer) return;
 
     const items = carousel.querySelectorAll('.carousel-item');
@@ -143,7 +168,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateCarousel() {
       items.forEach((item, i) => {
-        // Remove all position classes
         item.classList.remove('active', 'prev', 'next', 'far-prev', 'far-next');
 
         const diff = i - currentIndex;
@@ -169,6 +193,12 @@ document.addEventListener('DOMContentLoaded', () => {
       dots.forEach((dot, i) => {
         dot.classList.toggle('active', i === currentIndex);
       });
+
+      // Update caption
+      if (captionEl) {
+        const activeItem = items[currentIndex];
+        captionEl.textContent = activeItem.dataset.caption || '';
+      }
     }
 
     function goTo(index) {
@@ -185,8 +215,13 @@ document.addEventListener('DOMContentLoaded', () => {
       goTo(currentIndex - 1);
     }
 
+    // Arrow buttons
+    if (prevBtn) prevBtn.addEventListener('click', (e) => { e.stopPropagation(); prev(); });
+    if (nextBtn) nextBtn.addEventListener('click', (e) => { e.stopPropagation(); next(); });
+
     // Mouse drag
     carousel.addEventListener('mousedown', (e) => {
+      if (e.target.closest('.carousel-arrow')) return;
       isDragging = true;
       startX = e.clientX;
       dragDelta = 0;
