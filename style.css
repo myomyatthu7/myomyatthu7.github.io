@@ -138,6 +138,67 @@
   --card-shadow-heavy: rgba(0, 0, 0, 0.12);
 }
 
+/* ============== LIGHT MODE ENHANCEMENTS ============== */
+/* Softer, pastel hero orbs for light backgrounds */
+[data-theme="light"] .hero-bg .orb-1 {
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.15), transparent);
+}
+
+[data-theme="light"] .hero-bg .orb-2 {
+  background: radial-gradient(circle, rgba(118, 75, 162, 0.12), transparent);
+}
+
+[data-theme="light"] .hero-bg .orb-3 {
+  background: radial-gradient(circle, rgba(255, 107, 53, 0.08), transparent);
+}
+
+/* Subtle depth shadows on light mode cards */
+[data-theme="light"] .product-card,
+[data-theme="light"] .about-card,
+[data-theme="light"] .contact-card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04),
+              0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="light"] .product-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08),
+              0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .hero-app-card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04),
+              0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+/* Frosted navbar in light mode */
+[data-theme="light"] .navbar.scrolled {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Enhanced section dividers in light mode */
+[data-theme="light"] .products::before,
+[data-theme="light"] .about::before,
+[data-theme="light"] .contact::before {
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.08), transparent);
+}
+
+/* Slightly stronger glow on product hover in light mode */
+[data-theme="light"] [data-product="order-pad"] .product-card-inner:hover {
+  box-shadow: 0 0 40px rgba(255, 107, 53, 0.12), 0 20px 60px var(--card-shadow);
+}
+
+[data-theme="light"] [data-product="kutha"] .product-card-inner:hover {
+  box-shadow: 0 0 40px rgba(13, 148, 136, 0.12), 0 20px 60px var(--card-shadow);
+}
+
+[data-theme="light"] [data-product="dhamma"] .product-card-inner:hover {
+  box-shadow: 0 0 40px rgba(212, 168, 85, 0.12), 0 20px 60px var(--card-shadow);
+}
+
+[data-theme="light"] [data-product="the-pad"] .product-card-inner:hover {
+  box-shadow: 0 0 40px rgba(144, 202, 249, 0.12), 0 20px 60px var(--card-shadow);
+}
+
 /* ============== RESET & BASE ============== */
 *,
 *::before,
@@ -159,8 +220,6 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
-  transition: background-color var(--duration-normal) var(--ease-out),
-              color var(--duration-normal) var(--ease-out);
 }
 
 a {
@@ -1302,14 +1361,77 @@ ul {
 /* ============== SCROLL ANIMATIONS ============== */
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: all var(--duration-slow) var(--ease-out);
+  transform: translateY(40px);
+  transition: opacity 0.8s var(--ease-out),
+              transform 0.8s var(--ease-out);
 }
 
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Slide from left */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.8s var(--ease-out),
+              transform 0.8s var(--ease-out);
+}
+
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide from right */
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.8s var(--ease-out),
+              transform 0.8s var(--ease-out);
+}
+
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scale up */
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.8s var(--ease-out),
+              transform 0.8s var(--ease-out);
+}
+
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Staggered children — each child fades in with a delay */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.5s var(--ease-out),
+              transform 0.5s var(--ease-out);
+}
+
+.reveal-stagger.visible > *:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0s; }
+.reveal-stagger.visible > *:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.06s; }
+.reveal-stagger.visible > *:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.12s; }
+.reveal-stagger.visible > *:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.18s; }
+.reveal-stagger.visible > *:nth-child(5) { opacity: 1; transform: translateY(0); transition-delay: 0.24s; }
+.reveal-stagger.visible > *:nth-child(6) { opacity: 1; transform: translateY(0); transition-delay: 0.30s; }
+.reveal-stagger.visible > *:nth-child(7) { opacity: 1; transform: translateY(0); transition-delay: 0.36s; }
+.reveal-stagger.visible > *:nth-child(8) { opacity: 1; transform: translateY(0); transition-delay: 0.42s; }
+
+/* Delay modifiers — chain with reveal for sequential entrance */
+.reveal-delay-1 { transition-delay: 0.1s !important; }
+.reveal-delay-2 { transition-delay: 0.2s !important; }
+.reveal-delay-3 { transition-delay: 0.3s !important; }
+.reveal-delay-4 { transition-delay: 0.4s !important; }
 
 /* ============== KEYFRAMES ============== */
 @keyframes fadeInUp {
@@ -1432,9 +1554,14 @@ ul {
     font-size: 1.3rem;
   }
 
+  .theme-toggle {
+    margin-left: auto;
+  }
+
   .nav-toggle {
     display: flex;
     z-index: 1001;
+    margin-left: var(--space-sm);
   }
 
   .nav-toggle.active span:nth-child(1) {
@@ -1669,55 +1796,107 @@ body.loading::after {
   transition: box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
-/* ============== THEME TOGGLE BUTTON ============== */
+/* ============== THEME TOGGLE — PREMIUM PILL SWITCH ============== */
 .theme-toggle {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--bg-glass);
-  border: 1px solid var(--border-subtle);
+  width: 56px;
+  height: 28px;
+  border-radius: 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: center;
-  transition: all var(--duration-fast) var(--ease-out);
+  justify-content: space-between;
+  padding: 0 7px;
   position: relative;
-  color: var(--text-secondary);
   flex-shrink: 0;
+  transition: background-color var(--duration-normal) var(--ease-out),
+              border-color var(--duration-normal) var(--ease-out),
+              box-shadow var(--duration-normal) var(--ease-out);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .theme-toggle:hover {
-  background: var(--bg-glass-hover);
-  border-color: var(--border-light);
-  color: var(--text-primary);
-  transform: rotate(15deg);
+  border-color: var(--border-accent);
+  box-shadow: 0 0 20px var(--accent-glow);
 }
 
-.theme-toggle svg {
-  width: 18px;
-  height: 18px;
-  position: absolute;
-  transition: all var(--duration-normal) var(--ease-out);
+.theme-toggle:active {
+  transform: scale(0.96);
+  transition: transform 0.1s ease;
 }
 
+.theme-toggle .toggle-icon {
+  width: 12px;
+  height: 12px;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  transition: opacity var(--duration-normal) var(--ease-out),
+              color var(--duration-normal) var(--ease-out),
+              transform var(--duration-normal) var(--ease-out);
+}
+
+/* Dark mode (default): sun visible on left, moon hidden behind knob on right */
 .theme-toggle .icon-sun {
-  opacity: 1;
-  transform: rotate(0deg) scale(1);
+  color: var(--text-secondary);
+  opacity: 0.8;
+  transform: rotate(0deg);
 }
 
 .theme-toggle .icon-moon {
+  color: var(--text-tertiary);
   opacity: 0;
-  transform: rotate(-90deg) scale(0.5);
+  transform: rotate(90deg);
 }
 
+/* Light mode: moon visible on right, sun hidden behind knob on left */
 [data-theme="light"] .theme-toggle .icon-sun {
   opacity: 0;
-  transform: rotate(90deg) scale(0.5);
+  transform: rotate(-90deg);
 }
 
 [data-theme="light"] .theme-toggle .icon-moon {
-  opacity: 1;
-  transform: rotate(0deg) scale(1);
+  color: var(--text-secondary);
+  opacity: 0.8;
+  transform: rotate(0deg);
+}
+
+/* Sliding gradient knob */
+.toggle-knob {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  top: 2px;
+  left: calc(100% - 24px);
+  transition: left 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15),
+              0 0 8px rgba(102, 126, 234, 0.2);
+  z-index: 2;
+}
+
+[data-theme="light"] .toggle-knob {
+  left: 2px;
+}
+
+/* Hover glow halo behind knob */
+.toggle-knob::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  opacity: 0;
+  filter: blur(8px);
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.theme-toggle:hover .toggle-knob::after {
+  opacity: 0.35;
 }
 
 /* ============== ABOUT AVATAR IMAGE ============== */

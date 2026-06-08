@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="App Tech Hub — Premium mobile & web applications crafted by Stone. Restaurant POS, clinic management, Buddhist teachings, and more.">
+  <meta name="description"
+    content="App Tech Hub — Premium mobile & web applications crafted by Stone. Restaurant POS, clinic management, Buddhist teachings, and more.">
   <meta name="author" content="Stone (Myo Myat Thu)">
-  <meta name="keywords" content="App Tech Hub, Flutter apps, mobile development, The Order Pad, KuTha, Dhamma Channel, Myanmar apps">
+  <meta name="keywords"
+    content="App Tech Hub, Flutter apps, mobile development, The Order Pad, KuTha, Dhamma Channel, Myanmar apps">
   <meta property="og:title" content="App Tech Hub — Crafted by Stone">
   <meta property="og:description" content="Premium mobile & web applications that simplify your work and life.">
   <meta property="og:type" content="website">
@@ -15,6 +18,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/jpeg" href="assets/logos/web_logo.jpg">
 </head>
+
 <body class="loading">
 
   <!-- ==================== NAVBAR ==================== -->
@@ -30,20 +34,23 @@
         <a href="#contact" class="nav-cta">Contact</a>
       </div>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
-        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="5"/>
-          <line x1="12" y1="1" x2="12" y2="3"/>
-          <line x1="12" y1="21" x2="12" y2="23"/>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-          <line x1="1" y1="12" x2="3" y2="12"/>
-          <line x1="21" y1="12" x2="23" y2="12"/>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        <svg class="toggle-icon icon-sun" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5" />
+          <line x1="12" y1="1" x2="12" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="23" />
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+          <line x1="1" y1="12" x2="3" y2="12" />
+          <line x1="21" y1="12" x2="23" y2="12" />
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
         </svg>
-        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        <svg class="toggle-icon icon-moon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
         </svg>
+        <span class="toggle-knob"></span>
       </button>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span>
@@ -75,14 +82,17 @@
         </h1>
 
         <p class="hero-description">
-          Hi, I'm <strong>Stone</strong>. I craft premium mobile & web applications 
+          Hi, I'm <strong>Stone</strong>. I craft premium mobile & web applications
           — from restaurant management to clinic solutions and beyond.
         </p>
 
         <div class="hero-actions">
           <a href="#products" class="btn-primary">
             View Products
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M7 7h10v10"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 17l9.2-9.2M7 7h10v10" />
+            </svg>
           </a>
           <a href="#contact" class="btn-secondary">
             Get in touch
@@ -131,17 +141,18 @@
   <!-- ==================== PRODUCTS ==================== -->
   <section class="products section" id="products">
     <div class="container">
-      <div class="products-header reveal">
+      <div class="products-header reveal-scale">
         <div class="section-label">
           <span class="dot"></span>
           Products
         </div>
         <h2 class="section-title">Apps we've built</h2>
-        <p class="section-subtitle">Each product is crafted with care — designed to solve real problems for real people.</p>
+        <p class="section-subtitle">Each product is crafted with care — designed to solve real problems for real people.
+        </p>
       </div>
 
       <!-- ===== THE ORDER PAD ===== -->
-      <div class="product-card reveal" data-product="order-pad" id="product-order-pad">
+      <div class="product-card reveal-left" data-product="order-pad" id="product-order-pad">
         <div class="product-card-inner">
           <div class="product-info">
             <div class="product-header">
@@ -153,8 +164,8 @@
               <span class="product-status live">Live</span>
             </div>
             <p class="product-description">
-              A complete point-of-sale system for restaurants and cafes. Manage orders, tables, 
-              kitchen workflow, staff, and revenue — all from one beautiful app. 
+              A complete point-of-sale system for restaurants and cafes. Manage orders, tables,
+              kitchen workflow, staff, and revenue — all from one beautiful app.
               Available on both mobile and web.
             </p>
             <ul class="product-features">
@@ -167,11 +178,17 @@
             </ul>
             <div class="product-platforms">
               <span class="platform-badge">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 2.236a.4.4 0 00-.447-.008L3.553 10.228a.4.4 0 00-.003.694l2.73 1.59 11.243-10.276zm1.395 1.163L7.543 13.5l3.557 2.073 9.47-5.478a.8.8 0 000-1.39l-1.652-.955zM6.096 13.269l-2.193 2.007a.8.8 0 000 1.39l1.652.955 11.375-10.395-2.73-1.59-8.104 7.633zm1.447.843l-4.28 3.912a.4.4 0 00.207.73l13.523-7.82-3.557-2.073-5.893 5.251z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M17.523 2.236a.4.4 0 00-.447-.008L3.553 10.228a.4.4 0 00-.003.694l2.73 1.59 11.243-10.276zm1.395 1.163L7.543 13.5l3.557 2.073 9.47-5.478a.8.8 0 000-1.39l-1.652-.955zM6.096 13.269l-2.193 2.007a.8.8 0 000 1.39l1.652.955 11.375-10.395-2.73-1.59-8.104 7.633zm1.447.843l-4.28 3.912a.4.4 0 00.207.73l13.523-7.82-3.557-2.073-5.893 5.251z" />
+                </svg>
                 Android
               </span>
               <span class="platform-badge">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                </svg>
                 Web App
               </span>
             </div>
@@ -209,7 +226,7 @@
       </div>
 
       <!-- ===== THE ORDER PAD PLUS ===== -->
-      <div class="product-card reverse reveal" data-product="order-pad-plus" id="product-order-pad-plus">
+      <div class="product-card reverse reveal-right" data-product="order-pad-plus" id="product-order-pad-plus">
         <div class="product-card-inner">
           <div class="product-info">
             <div class="product-header">
@@ -221,8 +238,8 @@
               <span class="product-status coming-soon">Coming Soon</span>
             </div>
             <p class="product-description">
-              The next evolution of our restaurant POS system. Everything you love about The Order Pad, 
-              plus advanced features for scaling businesses — enhanced analytics, 
+              The next evolution of our restaurant POS system. Everything you love about The Order Pad,
+              plus advanced features for scaling businesses — enhanced analytics,
               multi-branch management, and more.
             </p>
             <ul class="product-features">
@@ -233,11 +250,17 @@
             </ul>
             <div class="product-platforms">
               <span class="platform-badge">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 2.236a.4.4 0 00-.447-.008L3.553 10.228a.4.4 0 00-.003.694l2.73 1.59 11.243-10.276zm1.395 1.163L7.543 13.5l3.557 2.073 9.47-5.478a.8.8 0 000-1.39l-1.652-.955zM6.096 13.269l-2.193 2.007a.8.8 0 000 1.39l1.652.955 11.375-10.395-2.73-1.59-8.104 7.633zm1.447.843l-4.28 3.912a.4.4 0 00.207.73l13.523-7.82-3.557-2.073-5.893 5.251z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M17.523 2.236a.4.4 0 00-.447-.008L3.553 10.228a.4.4 0 00-.003.694l2.73 1.59 11.243-10.276zm1.395 1.163L7.543 13.5l3.557 2.073 9.47-5.478a.8.8 0 000-1.39l-1.652-.955zM6.096 13.269l-2.193 2.007a.8.8 0 000 1.39l1.652.955 11.375-10.395-2.73-1.59-8.104 7.633zm1.447.843l-4.28 3.912a.4.4 0 00.207.73l13.523-7.82-3.557-2.073-5.893 5.251z" />
+                </svg>
                 Android
               </span>
               <span class="platform-badge">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                </svg>
                 Web App
               </span>
             </div>
@@ -253,7 +276,7 @@
       </div>
 
       <!-- ===== KUTHA ===== -->
-      <div class="product-card reveal" data-product="kutha" id="product-kutha">
+      <div class="product-card reveal-left" data-product="kutha" id="product-kutha">
         <div class="product-card-inner">
           <div class="product-info">
             <div class="product-header">
@@ -265,8 +288,8 @@
               <span class="product-status live">Built</span>
             </div>
             <p class="product-description">
-              A comprehensive clinic management system for doctors and healthcare providers. 
-              Manage patients, appointments, billing, and inventory 
+              A comprehensive clinic management system for doctors and healthcare providers.
+              Manage patients, appointments, billing, and inventory
               — all with a beautiful, intuitive dark interface.
             </p>
             <ul class="product-features">
@@ -279,7 +302,10 @@
             </ul>
             <div class="product-platforms">
               <span class="platform-badge">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 2.236a.4.4 0 00-.447-.008L3.553 10.228a.4.4 0 00-.003.694l2.73 1.59 11.243-10.276zm1.395 1.163L7.543 13.5l3.557 2.073 9.47-5.478a.8.8 0 000-1.39l-1.652-.955zM6.096 13.269l-2.193 2.007a.8.8 0 000 1.39l1.652.955 11.375-10.395-2.73-1.59-8.104 7.633zm1.447.843l-4.28 3.912a.4.4 0 00.207.73l13.523-7.82-3.557-2.073-5.893 5.251z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M17.523 2.236a.4.4 0 00-.447-.008L3.553 10.228a.4.4 0 00-.003.694l2.73 1.59 11.243-10.276zm1.395 1.163L7.543 13.5l3.557 2.073 9.47-5.478a.8.8 0 000-1.39l-1.652-.955zM6.096 13.269l-2.193 2.007a.8.8 0 000 1.39l1.652.955 11.375-10.395-2.73-1.59-8.104 7.633zm1.447.843l-4.28 3.912a.4.4 0 00.207.73l13.523-7.82-3.557-2.073-5.893 5.251z" />
+                </svg>
                 Android
               </span>
             </div>
@@ -312,7 +338,7 @@
       </div>
 
       <!-- ===== DHAMMA CHANNEL ===== -->
-      <div class="product-card reverse reveal" data-product="dhamma" id="product-dhamma">
+      <div class="product-card reverse reveal-right" data-product="dhamma" id="product-dhamma">
         <div class="product-card-inner">
           <div class="product-info">
             <div class="product-header">
@@ -324,8 +350,8 @@
               <span class="product-status live">Built</span>
             </div>
             <p class="product-description">
-              A beautiful app for reading and listening to Buddhist teachings. 
-              Features Pali and Myanmar text with audio playback, 
+              A beautiful app for reading and listening to Buddhist teachings.
+              Features Pali and Myanmar text with audio playback,
               offline support, and a warm, contemplative dark interface.
             </p>
             <ul class="product-features">
@@ -338,7 +364,10 @@
             </ul>
             <div class="product-platforms">
               <span class="platform-badge">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 2.236a.4.4 0 00-.447-.008L3.553 10.228a.4.4 0 00-.003.694l2.73 1.59 11.243-10.276zm1.395 1.163L7.543 13.5l3.557 2.073 9.47-5.478a.8.8 0 000-1.39l-1.652-.955zM6.096 13.269l-2.193 2.007a.8.8 0 000 1.39l1.652.955 11.375-10.395-2.73-1.59-8.104 7.633zm1.447.843l-4.28 3.912a.4.4 0 00.207.73l13.523-7.82-3.557-2.073-5.893 5.251z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M17.523 2.236a.4.4 0 00-.447-.008L3.553 10.228a.4.4 0 00-.003.694l2.73 1.59 11.243-10.276zm1.395 1.163L7.543 13.5l3.557 2.073 9.47-5.478a.8.8 0 000-1.39l-1.652-.955zM6.096 13.269l-2.193 2.007a.8.8 0 000 1.39l1.652.955 11.375-10.395-2.73-1.59-8.104 7.633zm1.447.843l-4.28 3.912a.4.4 0 00.207.73l13.523-7.82-3.557-2.073-5.893 5.251z" />
+                </svg>
                 Android
               </span>
             </div>
@@ -371,7 +400,7 @@
       </div>
 
       <!-- ===== THE PAD ===== -->
-      <div class="product-card reveal" data-product="the-pad" id="product-the-pad">
+      <div class="product-card reveal-left" data-product="the-pad" id="product-the-pad">
         <div class="product-card-inner">
           <div class="product-info">
             <div class="product-header">
@@ -383,7 +412,7 @@
               <span class="product-status coming-soon">Coming Soon</span>
             </div>
             <p class="product-description">
-              A clean and simple notepad app. No clutter, no distractions — just write. 
+              A clean and simple notepad app. No clutter, no distractions — just write.
               Supports light and dark themes with a focus on a delightful writing experience.
             </p>
             <ul class="product-features">
@@ -394,7 +423,10 @@
             </ul>
             <div class="product-platforms">
               <span class="platform-badge">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 2.236a.4.4 0 00-.447-.008L3.553 10.228a.4.4 0 00-.003.694l2.73 1.59 11.243-10.276zm1.395 1.163L7.543 13.5l3.557 2.073 9.47-5.478a.8.8 0 000-1.39l-1.652-.955zM6.096 13.269l-2.193 2.007a.8.8 0 000 1.39l1.652.955 11.375-10.395-2.73-1.59-8.104 7.633zm1.447.843l-4.28 3.912a.4.4 0 00.207.73l13.523-7.82-3.557-2.073-5.893 5.251z"/></svg>
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M17.523 2.236a.4.4 0 00-.447-.008L3.553 10.228a.4.4 0 00-.003.694l2.73 1.59 11.243-10.276zm1.395 1.163L7.543 13.5l3.557 2.073 9.47-5.478a.8.8 0 000-1.39l-1.652-.955zM6.096 13.269l-2.193 2.007a.8.8 0 000 1.39l1.652.955 11.375-10.395-2.73-1.59-8.104 7.633zm1.447.843l-4.28 3.912a.4.4 0 00.207.73l13.523-7.82-3.557-2.073-5.893 5.251z" />
+                </svg>
                 Android
               </span>
             </div>
@@ -416,35 +448,35 @@
   <section class="about section" id="about">
     <div class="container">
       <div class="about-content">
-        <div class="about-text reveal">
+        <div class="about-text reveal-left">
           <div class="section-label">
             <span class="dot"></span>
             About
           </div>
           <h2 class="section-title">The person behind<br>the apps</h2>
           <p>
-            I'm <strong>Stone</strong> — a passionate developer who loves building 
-            beautiful, functional applications. I believe great software should feel 
+            I'm <strong>Stone</strong> — a passionate developer who loves building
+            beautiful, functional applications. I believe great software should feel
             effortless to use while solving real problems.
           </p>
           <p>
-            From restaurant management to healthcare and spiritual education, I build 
-            cross-platform apps using Flutter and Firebase that make a real difference 
+            From restaurant management to healthcare and spiritual education, I build
+            cross-platform apps using Flutter that make a real difference
             in people's daily lives.
           </p>
-          <div class="tech-stack">
+          <div class="tech-stack reveal-stagger">
             <span class="tech-badge">Flutter</span>
             <span class="tech-badge">Dart</span>
             <span class="tech-badge">Firebase</span>
-            <span class="tech-badge">Firestore</span>
-            <span class="tech-badge">Cloud Functions</span>
+            <!-- <span class="tech-badge">Firestore</span> -->
+            <!-- <span class="tech-badge">Cloud Functions</span> -->
             <span class="tech-badge">Android</span>
             <span class="tech-badge">Web</span>
             <span class="tech-badge">iOS</span>
           </div>
         </div>
 
-        <div class="about-visual reveal">
+        <div class="about-visual reveal-right">
           <div class="about-card">
             <div class="about-avatar">
               <img src="assets/logos/web_logo.jpg" alt="Stone">
@@ -452,14 +484,26 @@
             <h3>Stone</h3>
             <p class="role">Full-Stack Mobile Developer</p>
             <div class="about-links">
-              <a href="https://github.com/myomyatthu7" target="_blank" rel="noopener noreferrer" class="about-link" aria-label="GitHub">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              <a href="https://github.com/myomyatthu7" target="_blank" rel="noopener noreferrer" class="about-link"
+                aria-label="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
               </a>
               <a href="mailto:myomyatthu19999@gmail.com" class="about-link" aria-label="Email">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="M22 7l-10 6L2 7" />
+                </svg>
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="about-link" aria-label="Facebook">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="about-link"
+                aria-label="Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
               </a>
             </div>
           </div>
@@ -471,7 +515,7 @@
   <!-- ==================== CONTACT ==================== -->
   <section class="contact section" id="contact">
     <div class="container">
-      <div class="contact-content reveal">
+      <div class="contact-content reveal-scale">
         <div class="section-label">
           <span class="dot"></span>
           Contact
@@ -493,14 +537,16 @@
             <div class="contact-icon">💻</div>
             <div class="contact-detail">
               <div class="label">GitHub</div>
-              <div class="value"><a href="https://github.com/myomyatthu7" target="_blank" rel="noopener noreferrer">github.com/myomyatthu7</a></div>
+              <div class="value"><a href="https://github.com/myomyatthu7" target="_blank"
+                  rel="noopener noreferrer">github.com/myomyatthu7</a></div>
             </div>
           </div>
           <div class="contact-item">
             <div class="contact-icon">📘</div>
             <div class="contact-detail">
               <div class="label">Facebook</div>
-              <div class="value"><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">App Tech Hub</a></div>
+              <div class="value"><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">App Tech
+                  Hub</a></div>
             </div>
           </div>
         </div>
@@ -527,9 +573,13 @@
 
   <!-- Scroll to top button -->
   <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6" />
+    </svg>
   </button>
 
   <script src="script.js"></script>
 </body>
+
 </html>
