@@ -41,6 +41,27 @@
   --border-light: rgba(255, 255, 255, 0.1);
   --border-accent: rgba(255, 255, 255, 0.15);
 
+  /* Theme-aware UI colors */
+  --navbar-scrolled-bg: rgba(10, 10, 15, 0.85);
+  --mobile-nav-bg: rgba(10, 10, 15, 0.97);
+  --overlay-bg: rgba(26, 26, 46, 0.85);
+  --grid-line-color: rgba(255, 255, 255, 0.02);
+  --carousel-dot-color: rgba(255, 255, 255, 0.2);
+  --carousel-dot-hover: rgba(255, 255, 255, 0.5);
+  --carousel-dot-active: rgba(255, 255, 255, 0.8);
+  --carousel-arrow-bg: rgba(255, 255, 255, 0.08);
+  --carousel-arrow-border: rgba(255, 255, 255, 0.12);
+  --carousel-arrow-hover-bg: rgba(255, 255, 255, 0.15);
+  --carousel-arrow-hover-border: rgba(255, 255, 255, 0.25);
+  --mockup-frame: #1a1a2a;
+  --mockup-frame-border: #2a2a3a;
+  --mockup-base-start: #3a3a4a;
+  --mockup-base-end: #2a2a3a;
+  --mockup-notch: rgba(255, 255, 255, 0.08);
+  --mockup-camera: rgba(255, 255, 255, 0.06);
+  --card-shadow: rgba(0, 0, 0, 0.3);
+  --card-shadow-heavy: rgba(0, 0, 0, 0.5);
+
   /* Spacing */
   --space-xs: 4px;
   --space-sm: 8px;
@@ -71,6 +92,52 @@
   --duration-slow: 600ms;
 }
 
+/* ============== LIGHT THEME ============== */
+[data-theme="light"] {
+  /* Base Colors */
+  --bg-primary: #f8f9fc;
+  --bg-secondary: #eef0f5;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f0f1f6;
+  --bg-glass: rgba(0, 0, 0, 0.03);
+  --bg-glass-hover: rgba(0, 0, 0, 0.06);
+
+  /* Text */
+  --text-primary: #1a1a2e;
+  --text-secondary: #5a5a72;
+  --text-tertiary: #8888a0;
+  --text-accent: #0a0a0f;
+
+  /* Accent */
+  --accent-glow: rgba(102, 126, 234, 0.2);
+
+  /* Borders */
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --border-light: rgba(0, 0, 0, 0.1);
+  --border-accent: rgba(0, 0, 0, 0.15);
+
+  /* Theme-aware UI colors */
+  --navbar-scrolled-bg: rgba(248, 249, 252, 0.85);
+  --mobile-nav-bg: rgba(248, 249, 252, 0.97);
+  --overlay-bg: rgba(255, 255, 255, 0.88);
+  --grid-line-color: rgba(0, 0, 0, 0.04);
+  --carousel-dot-color: rgba(0, 0, 0, 0.15);
+  --carousel-dot-hover: rgba(0, 0, 0, 0.35);
+  --carousel-dot-active: rgba(0, 0, 0, 0.7);
+  --carousel-arrow-bg: rgba(0, 0, 0, 0.05);
+  --carousel-arrow-border: rgba(0, 0, 0, 0.1);
+  --carousel-arrow-hover-bg: rgba(0, 0, 0, 0.1);
+  --carousel-arrow-hover-border: rgba(0, 0, 0, 0.2);
+  --mockup-frame: #e8e8f0;
+  --mockup-frame-border: #d0d0dd;
+  --mockup-base-start: #d8d8e2;
+  --mockup-base-end: #c8c8d5;
+  --mockup-notch: rgba(0, 0, 0, 0.06);
+  --mockup-camera: rgba(0, 0, 0, 0.05);
+  --card-shadow: rgba(0, 0, 0, 0.08);
+  --card-shadow-heavy: rgba(0, 0, 0, 0.12);
+}
+
 /* ============== RESET & BASE ============== */
 *,
 *::before,
@@ -92,6 +159,8 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
+  transition: background-color var(--duration-normal) var(--ease-out),
+              color var(--duration-normal) var(--ease-out);
 }
 
 a {
@@ -175,7 +244,7 @@ ul {
 }
 
 .navbar.scrolled {
-  background: rgba(10, 10, 15, 0.85);
+  background: var(--navbar-scrolled-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-subtle);
@@ -324,8 +393,8 @@ ul {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    linear-gradient(var(--grid-line-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line-color) 1px, transparent 1px);
   background-size: 60px 60px;
   mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
   -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
@@ -613,7 +682,7 @@ ul {
 .product-card:hover {
   border-color: var(--border-light);
   transform: translateY(-4px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 60px var(--card-shadow);
 }
 
 .product-card-inner {
@@ -844,7 +913,7 @@ ul {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--carousel-dot-color);
   border: none;
   cursor: pointer;
   transition: all 0.3s var(--ease-out);
@@ -852,23 +921,23 @@ ul {
 }
 
 .carousel-dot.active {
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--carousel-dot-active);
   transform: scale(1.3);
 }
 
 .carousel-dot:hover {
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--carousel-dot-hover);
 }
 
 /* === PHONE MOCKUP === */
 .phone-mockup {
   width: 200px;
-  background: #1a1a2a;
+  background: var(--mockup-frame);
   border-radius: 28px;
   padding: 8px;
   box-shadow:
-    0 25px 60px rgba(0, 0, 0, 0.5),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    0 25px 60px var(--card-shadow-heavy),
+    inset 0 0 0 1px var(--border-light);
   position: relative;
 }
 
@@ -881,7 +950,7 @@ ul {
   width: 50px;
   height: 5px;
   border-radius: 3px;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--mockup-notch);
   z-index: 2;
 }
 
@@ -902,9 +971,9 @@ ul {
   width: 100%;
   display: block;
   border-radius: 8px 8px 0 0;
-  border: 3px solid #2a2a3a;
+  border: 3px solid var(--mockup-frame-border);
   border-bottom: none;
-  box-shadow: 0 -5px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 -5px 30px var(--card-shadow);
   pointer-events: none;
 }
 
@@ -913,12 +982,12 @@ ul {
   display: block;
   width: 110%;
   height: 14px;
-  background: linear-gradient(180deg, #3a3a4a, #2a2a3a);
+  background: linear-gradient(180deg, var(--mockup-base-start), var(--mockup-base-end));
   border-radius: 0 0 8px 8px;
   margin: 0 auto;
   position: relative;
   left: -5%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px var(--card-shadow);
 }
 
 .laptop-mockup::before {
@@ -930,7 +999,7 @@ ul {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--mockup-camera);
   z-index: 2;
   margin-top: -1px;
 }
@@ -960,7 +1029,7 @@ ul {
   align-items: center;
   justify-content: center;
   z-index: 5;
-  background: rgba(26, 26, 46, 0.85);
+  background: var(--overlay-bg);
   backdrop-filter: blur(4px);
 }
 
@@ -1347,7 +1416,7 @@ ul {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(10, 10, 15, 0.97);
+    background: var(--mobile-nav-bg);
     backdrop-filter: blur(20px);
     flex-direction: column;
     justify-content: center;
@@ -1504,7 +1573,7 @@ body.loading::after {
   transition: all 0.3s var(--ease-out);
   z-index: 100;
   backdrop-filter: blur(10px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 24px var(--card-shadow);
 }
 
 .scroll-top.visible {
@@ -1516,7 +1585,7 @@ body.loading::after {
   background: var(--bg-card-hover);
   border-color: var(--border-accent);
   transform: translateY(-3px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 12px 32px var(--card-shadow-heavy);
 }
 
 /* ============== CAROUSEL ARROWS ============== */
@@ -1527,8 +1596,8 @@ body.loading::after {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--carousel-arrow-bg);
+  border: 1px solid var(--carousel-arrow-border);
   color: var(--text-primary);
   font-size: 1.4rem;
   cursor: pointer;
@@ -1551,8 +1620,8 @@ body.loading::after {
 }
 
 .carousel-arrow:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.25);
+  background: var(--carousel-arrow-hover-bg);
+  border-color: var(--carousel-arrow-hover-border);
   transform: translateY(-50%) scale(1.1);
 }
 
@@ -1572,32 +1641,83 @@ body.loading::after {
 
 /* ============== PRODUCT CARD HOVER GLOW ============== */
 [data-product="order-pad"] .product-card-inner:hover {
-  box-shadow: 0 0 40px rgba(255, 107, 53, 0.08), 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 40px rgba(255, 107, 53, 0.08), 0 20px 60px var(--card-shadow);
   border-color: rgba(255, 107, 53, 0.15);
 }
 
 [data-product="order-pad-plus"] .product-card-inner:hover {
-  box-shadow: 0 0 40px rgba(255, 107, 53, 0.06), 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 40px rgba(255, 107, 53, 0.06), 0 20px 60px var(--card-shadow);
   border-color: rgba(255, 107, 53, 0.1);
 }
 
 [data-product="kutha"] .product-card-inner:hover {
-  box-shadow: 0 0 40px rgba(13, 148, 136, 0.08), 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 40px rgba(13, 148, 136, 0.08), 0 20px 60px var(--card-shadow);
   border-color: rgba(13, 148, 136, 0.15);
 }
 
 [data-product="dhamma"] .product-card-inner:hover {
-  box-shadow: 0 0 40px rgba(212, 168, 85, 0.08), 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 40px rgba(212, 168, 85, 0.08), 0 20px 60px var(--card-shadow);
   border-color: rgba(212, 168, 85, 0.15);
 }
 
 [data-product="the-pad"] .product-card-inner:hover {
-  box-shadow: 0 0 40px rgba(144, 202, 249, 0.08), 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 40px rgba(144, 202, 249, 0.08), 0 20px 60px var(--card-shadow);
   border-color: rgba(144, 202, 249, 0.15);
 }
 
 .product-card-inner {
   transition: box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+/* ============== THEME TOGGLE BUTTON ============== */
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--duration-fast) var(--ease-out);
+  position: relative;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  background: var(--bg-glass-hover);
+  border-color: var(--border-light);
+  color: var(--text-primary);
+  transform: rotate(15deg);
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.theme-toggle .icon-sun {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.theme-toggle .icon-moon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.5);
+}
+
+[data-theme="light"] .theme-toggle .icon-sun {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5);
+}
+
+[data-theme="light"] .theme-toggle .icon-moon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
 }
 
 /* ============== ABOUT AVATAR IMAGE ============== */

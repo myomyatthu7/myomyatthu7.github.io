@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "../../../MMT/the_order_pad"
+		},
+		{
+			"path": "../../../MMT/kutha"
+		},
+		{
+			"path": "../../../MMT/dhamma_channel"
+		},
+		{
+			"path": "../../../MMT/the_pad"
+		},
+		{
+			"path": "../../../app_images"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {}
+}

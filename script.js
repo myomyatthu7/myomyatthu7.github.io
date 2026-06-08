@@ -5,6 +5,46 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ============== THEME TOGGLE ==============
+  const themeToggle = document.getElementById('themeToggle');
+  const htmlEl = document.documentElement;
+
+  // Initialize theme: localStorage > OS preference > dark
+  function getPreferredTheme() {
+    const stored = localStorage.getItem('theme');
+    if (stored) return stored;
+    if (window.matchMedia('(prefers-color-scheme: light)').matches) return 'light';
+    return 'dark';
+  }
+
+  function applyTheme(theme) {
+    if (theme === 'light') {
+      htmlEl.setAttribute('data-theme', 'light');
+    } else {
+      htmlEl.removeAttribute('data-theme');
+    }
+    localStorage.setItem('theme', theme);
+  }
+
+  // Apply on load (no transition flash)
+  const currentTheme = getPreferredTheme();
+  applyTheme(currentTheme);
+
+  // Toggle on click
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const isDark = !htmlEl.hasAttribute('data-theme');
+      applyTheme(isDark ? 'light' : 'dark');
+    });
+  }
+
+  // Listen for OS theme changes
+  window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) {
+      applyTheme(e.matches ? 'light' : 'dark');
+    }
+  });
+
   // ============== PAGE LOAD ANIMATION ==============
   requestAnimationFrame(() => {
     document.body.classList.remove('loading');
